@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import { Cards, Chart, CountryPicker } from "./components";
 
 function App() {
   return (
     <div>
-     <h1>Hi there</h1>
+      <Cards />
+      <CountryPicker />
+      <Chart />
     </div>
   );
 }
