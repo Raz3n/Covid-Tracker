@@ -5,14 +5,14 @@ import { fetchData } from "./api/index";
 import styles from "./App.module.css";
 
 const App = () => {
-
   const [data, setData] = useState({});
 
   useEffect(() => {
-    const fetchedData = async() => {
-      setData(await fetchData());
-    }
-     
+    const fetchedData = async () => {
+      const recivedData = await fetchData();
+      setData(recivedData);
+    };
+
     fetchedData();
   }, []);
 
