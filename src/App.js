@@ -9,8 +9,8 @@ const App = () => {
 
   useEffect(() => {
     const fetchedData = async () => {
-      const recivedData = await fetchData();
-      setData(recivedData);
+      const receivedData = await fetchData();
+      setData(receivedData);
     };
 
     fetchedData();
