@@ -16,4 +16,4 @@
 * axios
 * chart.js
 
-![Screenshot of US bar chart](Covid-Tracker/src/images/image.png)
+![Screenshot of US bar chart](src/images/us-bar.png)
