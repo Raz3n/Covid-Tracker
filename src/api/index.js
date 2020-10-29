@@ -5,8 +5,8 @@ const url = "https://covid19.mathdro.id/api";
 export const fetchData = async (country) => {
   let modifiedUrl = url;
 
-  if(country) {
-    modifiedUrl = `${url}/countries/${country}`
+  if (country) {
+    modifiedUrl = `${url}/countries/${country}`;
   }
 
   try {
@@ -16,22 +16,34 @@ export const fetchData = async (country) => {
 
     return { confirmed, recovered, deaths, lastUpdate };
   } catch (error) {
-    console.log(error)
+    return error;
   }
 };
 
-//destructuring to the max
+// API not displaying this anymore
+// export const fetchDailyData = async () => {
+//   try {
+//     const { data } = await axios.get(`${url}/daily`);
+//     const requiredData = data.map((dailyData) => ({
+//       confirmed: dailyData.confirmed.total,
+//       deaths: dailyData.deaths.total,
+//       date: dailyData.reportDate,
+//     }));
+//     return requiredData;
+//   } catch (error) {
+//     return error;
+//   }
+// };
 
+//this api will show data for US, using for visual
 export const fetchDailyData = async () => {
   try {
-    const { data } = await axios.get(`${url}/daily`);
-    const requiredData = data.map((dailyData) => ({
-      confirmed: dailyData.confirmed.total,
-      deaths: dailyData.deaths.total,
-      date: dailyData.reportDate,
-    }));
-    return requiredData;
-  } catch (error) {}
+    const { data } = await axios.get('https://api.covidtracking.com/v1/us/daily.json');
+
+    return data.map(({ positive, recovered, death, dateChecked: date }) => ({ confirmed: positive, recovered, deaths: death, date }));
+  } catch (error) {
+    return error;
+  }
 };
 
 export const fetchCountries = async () => {

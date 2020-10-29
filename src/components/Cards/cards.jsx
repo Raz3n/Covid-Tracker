@@ -20,7 +20,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
               <Countup start={0} end={confirmed.value} duration={2.5} separator="," />
               </Typography>
             <Typography color="textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
-            <Typography variant="body2">no of cases</Typography>
+            <Typography variant="body2">number of cases</Typography>
           </CardContent>
         </Grid>
         <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.recovered)}>
@@ -30,7 +30,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
               <Countup start={0} end={recovered.value} duration={2.5} separator="," />
               </Typography>
               <Typography color="textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
-            <Typography variant="body2">no of recoveries</Typography>
+            <Typography variant="body2">number of recoveries</Typography>
           </CardContent>
         </Grid>
         <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.deaths)}>
@@ -40,7 +40,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
               <Countup start={0} end={deaths.value} duration={2.5} separator="," />
               </Typography>
               <Typography color="textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
-            <Typography variant="body2">no of deaths</Typography>
+            <Typography variant="body2">number of deaths</Typography>
           </CardContent>
         </Grid>
       </Grid>
