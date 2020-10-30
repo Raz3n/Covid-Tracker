@@ -4,6 +4,10 @@
 * The app uses Javascript and React. 
 * Api data is always changing, so data displayed can at times seem questionable.
 
+# Live version via AWS
+
+https://main.d1378l9xihr13b.amplifyapp.com/
+
 
 # Set-up
 
