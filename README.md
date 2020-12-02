@@ -4,9 +4,9 @@
 * The app uses Javascript and React. 
 * Api data is always changing, so data displayed can at times seem questionable.
 
-# Live version via AWS
+# Live version via Netlify
 
-https://main.d1378l9xihr13b.amplifyapp.com/
+https://global-covid-tracker-app.netlify.app/
 
 
 # Set-up
